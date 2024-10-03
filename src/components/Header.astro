@@ -1,0 +1,62 @@
+---
+import InstagramIcon from "../icons/InstagramIcon.astro";
+import FacebookIcon from "../icons/FacebookIcon.astro";
+import XIcon from "../icons/XIcon.astro";
+import EarthIcon from "../icons/EarthIcon.astro";
+---
+
+<header class="w-full h-20 bg-transparent bg-header text-white">
+	<section class="container m-auto h-full flex justify-between items-center">
+		<picture class="flex gap-2 items-center">
+			<img
+				src="public/images/logo_pch_blanco.png"
+				alt="Logo la cámara de la gente PCH"
+				width="42px"
+				height="42px"
+			/>
+			<p>La Cámara de la Gente</p>
+		</picture>
+
+		<div class="flex items-center gap-8">
+			<nav>
+				<ul class="flex gap-2">
+					<li>
+						<a href="/" class="block px-2 py-1">Inicio</a>
+					</li>
+					<li>
+						<a href="/nosotros" class="block px-2 py-1">Nosotros</a>
+					</li>
+					<li>
+						<a href="/servicios" class="block px-2 py-1">Servicios</a>
+					</li>
+					<li>
+						<a href="/tecnologia" class="block px-2 py-1">Tecnología</a>
+					</li>
+					<li>
+						<a href="/eventos" class="block px-2 py-1">Eventos</a>
+					</li>
+					<li>
+						<a href="/ayuda" class="block px-2 py-1">Ayuda</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="flex gap-2">
+				<a href="https://instagram.com">
+					<InstagramIcon width="1.2rem" height="1.2rem" />
+				</a>
+				<a href="https://facebook.com">
+					<FacebookIcon width="1.2rem" height="1.2rem" />
+				</a>
+				<a href="https://x.com">
+					<XIcon width="1.2rem" height="1.2rem" />
+				</a>
+			</div>
+
+			<button role="button" class="flex gap-1 items-center">
+				<EarthIcon width="1.2rem" height="1.2rem" />
+				<p>ES</p>
+			</button>
+		</div>
+	</section>
+</header>
