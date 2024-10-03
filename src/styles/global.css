@@ -1,8 +1,12 @@
-* {
-	font-family: 'Fuente-Nico', sans-serif;
+body {
+	font-family: sans-serif;
 }
 
 header {
+	font-family: 'Comfortaa Variable',
+		sans-serif;
+	font-weight: bold;
+
 	&.bg-header {
 		background-color: transparent;
 	}
@@ -26,6 +30,8 @@ header {
 	nav {
 		li {
 			a {
+				text-shadow: #000 0px 0px 16px;
+
 				&::after {
 					content: '';
 					display: block;
