@@ -3,6 +3,7 @@ import InstagramIcon from "../icons/InstagramIcon.astro";
 import FacebookIcon from "../icons/FacebookIcon.astro";
 import XIcon from "../icons/XIcon.astro";
 import { Image } from "astro:assets";
+import logoImage from "../images/logo_pch_blanco.png";
 ---
 
 <footer class="bg-footer py-3 text-white">
@@ -10,7 +11,7 @@ import { Image } from "astro:assets";
         <!-- Imagen con el nombre de la empresa -->
         <picture class="flex gap-2 items-center mb-4 pt-3">
             <Image
-                src="/src/images/logo_pch_blanco.png"
+                src={logoImage}
                 alt="Logo la cámara de la gente PCH"
                 width="42"
                 height="42"

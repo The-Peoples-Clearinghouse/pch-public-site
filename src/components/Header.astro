@@ -4,6 +4,7 @@ import FacebookIcon from "../icons/FacebookIcon.astro";
 import XIcon from "../icons/XIcon.astro";
 import EarthIcon from "../icons/EarthIcon.astro";
 import { Image } from "astro:assets";
+import logoImage from "../images/logo_pch_blanco.png";
 ---
 
 <header
@@ -12,7 +13,7 @@ import { Image } from "astro:assets";
 	<section class="container m-auto h-full flex justify-between items-center">
 		<picture class="flex gap-1 items-center">
 			<Image
-				src="/src/images/logo_pch_blanco.png"
+				src={logoImage}
 				alt="Logo la cámara de la gente PCH"
 				width="52"
 				height="52"
