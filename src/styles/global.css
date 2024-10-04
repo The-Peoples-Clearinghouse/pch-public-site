@@ -1,4 +1,12 @@
+body {
+	font-family: sans-serif;
+}
+
 header {
+	font-family: 'Comfortaa Variable',
+		sans-serif;
+	font-weight: bold;
+
 	&.bg-header {
 		background-color: transparent;
 	}
@@ -15,13 +23,15 @@ header {
 		background: linear-gradient(90deg, rgba(43, 49, 123, 1) 0%, rgba(92, 86, 161, 1) 20%, rgba(106, 125, 188, 1) 40%, rgba(106, 125, 188, 1) 60%, rgba(92, 86, 161, 1) 80%, rgba(43, 49, 123, 1) 100%);
 		background-size: 100%;
 		background-position: center;
-		opacity: 0.75;
+		opacity: 0;
 		z-index: -1;
 	}
 
 	nav {
 		li {
 			a {
+				text-shadow: #000 0px 0px 16px;
+
 				&::after {
 					content: '';
 					display: block;
@@ -51,8 +61,15 @@ header {
 	}
 }
 
+
 footer {
 	background: rgb(43, 49, 123);
 	background: linear-gradient(90deg, rgba(43, 49, 123, 1) 0%, rgba(92, 86, 161, 1) 20%, rgba(106, 125, 188, 1) 40%, rgba(106, 125, 188, 1) 60%, rgba(92, 86, 161, 1) 80%, rgba(43, 49, 123, 1) 100%);
+
+.bg-gradient {
+	background: rgb(43, 49, 123);
+	background: linear-gradient(90deg, rgba(43, 49, 123, 1) 0%, rgba(92, 86, 161, 1) 20%, rgba(106, 125, 188, 1) 40%, rgba(106, 125, 188, 1) 60%, rgba(92, 86, 161, 1) 80%, rgba(43, 49, 123, 1) 100%);
+	background-size: 100%;
+	background-position: center;
 	opacity: 0.75;
 }
