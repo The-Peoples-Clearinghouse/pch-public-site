@@ -2,17 +2,18 @@
 import InstagramIcon from "../icons/InstagramIcon.astro";
 import FacebookIcon from "../icons/FacebookIcon.astro";
 import XIcon from "../icons/XIcon.astro";
+import { Image } from "astro:assets";
 ---
 
 <footer class="bg-footer py-3 text-white">
     <div class="container mx-auto">
         <!-- Imagen con el nombre de la empresa -->
         <picture class="flex gap-2 items-center mb-4 pt-3">
-            <img
+            <Image
                 src="/src/images/logo_pch_blanco.png"
                 alt="Logo la cámara de la gente PCH"
-                width="42px"
-                height="42px"
+                width="42"
+                height="42"
             />
             <p>La Cámara de la Gente</p>
         </picture>
