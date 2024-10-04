@@ -66,6 +66,8 @@ footer {
 	background: rgb(43, 49, 123);
 	background: linear-gradient(90deg, rgba(43, 49, 123, 1) 0%, rgba(92, 86, 161, 1) 20%, rgba(106, 125, 188, 1) 40%, rgba(106, 125, 188, 1) 60%, rgba(92, 86, 161, 1) 80%, rgba(43, 49, 123, 1) 100%);
 
+}
+
 .bg-gradient {
 	background: rgb(43, 49, 123);
 	background: linear-gradient(90deg, rgba(43, 49, 123, 1) 0%, rgba(92, 86, 161, 1) 20%, rgba(106, 125, 188, 1) 40%, rgba(106, 125, 188, 1) 60%, rgba(92, 86, 161, 1) 80%, rgba(43, 49, 123, 1) 100%);
