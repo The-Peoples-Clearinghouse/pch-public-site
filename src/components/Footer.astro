@@ -1,0 +1,80 @@
+---
+import InstagramIcon from "../icons/InstagramIcon.astro";
+import FacebookIcon from "../icons/FacebookIcon.astro";
+import XIcon from "../icons/XIcon.astro";
+---
+
+<footer class="bg-footer py-8 text-white">
+    <div class="container mx-auto">
+        <!-- Imagen con el nombre de la empresa -->
+        <picture class="flex gap-2 items-center">
+            <img
+                src="public/images/logo_pch_blanco.png"
+                alt="Logo la cámara de la gente PCH"
+                width="42px"
+                height="42px"
+            />
+            <p>La Cámara de la Gente</p>
+        </picture>
+
+        <!-- Sección principal del footer -->
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 border-t border-gray-200 pt-8"
+        >
+            <div class="grid-cols-1">
+                <h2 class="text-lg font-semibold mb-4">Inicio</h2>
+                <h2 class="text-lg font-semibold mb-4">Nosotros</h2>
+                <h2 class="text-lg font-semibold mb-4">Servicios</h2>
+                <h2 class="text-lg font-semibold mb-4">Tecnología</h2>
+                <h2 class="text-lg font-semibold mb-4">Eventos</h2>
+                <h2 class="text-lg font-semibold mb-4">Ayuda</h2>
+            </div>
+            <div class="grid-cols-2">
+                <h2 class="text-lg font-semibold mb-4 center">
+                    INFORMACIÓN DE CONTACTO
+                </h2>
+                <p class="mb-4">
+                    Calzada Porfirio Día 243, Colonia Reforma. CP. 68050. Oaxaca
+                    de Juárez, Oaxaca.
+                </p>
+            </div>
+            <div class="grid-cols-3">
+                <h2 class="text-lg font-semibold mb-4 center">Stay in Touch</h2>
+                <p class="mb-4">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Earum id, iure consectetur et error hic!
+                </p>
+                <form class="flex flex-col gap-4">
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="p-3 rounded bg-gray-100 text-gray-900"
+                    />
+                    <button
+                        class="bg-blue p-3 rounded text-white hover:bg-blue-700"
+                        >Subscribe</button
+                    >
+                </form>
+            </div>
+        </div>
+
+        <div
+            class="flex flex-col md:flex-row justify-between items-center border-t border-gray-200 pt-6"
+        >
+            <p class="text-gray-300 text-sm">
+                &copy; 2024 Your Company. All rights reserved.
+            </p>
+            <div class="mt- md:mt-0 flex space-x-6 items-center">
+                <a href="https://instagram.com">
+                    <InstagramIcon width="3rem" height="3rem" />
+                </a>
+                <a href="https://facebook.com">
+                    <FacebookIcon width="3rem" height="3rem" />
+                </a>
+                <a href="https://x.com">
+                    <XIcon width="3rem" height="3rem" />
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
