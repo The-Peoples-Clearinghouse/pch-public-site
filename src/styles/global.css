@@ -5,13 +5,8 @@ body {
 header {
 	font-family: 'Comfortaa Variable',
 		sans-serif;
-	font-weight: bold;
 
-	&.bg-header {
-		background-color: transparent;
-	}
-
-	&.bg-header::before {
+	&::before {
 		content: '';
 		display: block;
 		position: absolute;
@@ -23,7 +18,7 @@ header {
 		background: linear-gradient(90deg, rgba(43, 49, 123, 1) 0%, rgba(92, 86, 161, 1) 20%, rgba(106, 125, 188, 1) 40%, rgba(106, 125, 188, 1) 60%, rgba(92, 86, 161, 1) 80%, rgba(43, 49, 123, 1) 100%);
 		background-size: 100%;
 		background-position: center;
-		opacity: 0;
+		opacity: var(--header-opacity, 0);
 		z-index: -1;
 	}
 
