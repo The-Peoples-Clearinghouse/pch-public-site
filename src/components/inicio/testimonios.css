@@ -1,0 +1,11 @@
+#testimonios {
+	blockquote p {
+		&::before {
+			content: '“';
+		}
+
+		&::after {
+			content: '”';
+		}
+	}
+}
