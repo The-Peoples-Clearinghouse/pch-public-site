@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import bannerImage from "../../images/banner.webp";
-import "./banner.css";
 ---
 
 <section class="w-full h-[650px] relative mb-20" id="banner">
@@ -9,7 +8,7 @@ import "./banner.css";
 		src={bannerImage}
 		alt="imagen"
 		loading="eager"
-		class="-z-20 bg-black h-full absolute right-0 w-3/5 rounded-bl-[200px]"
+		class="-z-20 bg-black h-full absolute right-0 w-3/5 rounded-bl-[200px] grayscale object-cover"
 	/>
 	<div id="filter" class="-z-10 absolute inset-0 bg-gradient"></div>
 	<div class="container m-auto z-30 h-full flex items-center">
