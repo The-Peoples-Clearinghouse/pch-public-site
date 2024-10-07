@@ -9,28 +9,29 @@ import logoImage from "../images/logo_pch_blanco.png";
 <footer class="bg-footer py-3 text-white">
     <div class="container mx-auto">
         <!-- Imagen con el nombre de la empresa -->
-        <picture class="flex gap-2 items-center mb-4 pt-3">
+        <picture class="flex gap-2 items-center mb-4 pt-3 px-2">
             <Image
                 src={logoImage}
                 alt="Logo la cámara de la gente PCH"
                 width="42"
                 height="42"
             />
-            <p>La Cámara de la Gente</p>
+            <p>Cámara de la Gente</p>
         </picture>
 
         <!-- Sección principal del footer -->
         <div
-            class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 border-t border-gray-200 pt-8"
+            class="flex flex-col md:flex-row gap-8 border-t border-gray-200 pt-8 px-2"
         >
-            <div>
-                <h2 class="text-lg font-semibold mb-4">Inicio</h2>
-                <h2 class="text-lg font-semibold mb-4">Nosotros</h2>
-                <h2 class="text-lg font-semibold mb-4">Servicios</h2>
-                <h2 class="text-lg font-semibold mb-4">Tecnología</h2>
-                <h2 class="text-lg font-semibold mb-4">Eventos</h2>
-                <h2 class="text-lg font-semibold mb-4">Ayuda</h2>
-            </div>
+            <nav class="hidden md:block basis-1/3">
+                <p class="text-lg font-semibold mb-2">Inicio</p>
+                <p class="text-lg font-semibold mb-2">Nosotros</p>
+                <p class="text-lg font-semibold mb-2">Servicios</p>
+                <p class="text-lg font-semibold mb-2">Tecnología</p>
+                <p class="text-lg font-semibold mb-2">Eventos</p>
+                <p class="text-lg font-semibold mb-2">Ayuda</p>
+            </nav>
+
             <div>
                 <h2 class="text-lg font-semibold mb-4 center">
                     INFORMACIÓN DE CONTACTO
@@ -40,9 +41,10 @@ import logoImage from "../images/logo_pch_blanco.png";
                     de Juárez, Oaxaca.
                 </p>
             </div>
+
             <div>
                 <h2 class="text-lg font-semibold mb-4 center">
-                    Mantente en contacto
+                    MANTENTE INFORMADO
                 </h2>
                 <p class="mb-4">
                     Indica tu email para recibir actualizaciones de La Cámara de
@@ -63,12 +65,12 @@ import logoImage from "../images/logo_pch_blanco.png";
         </div>
 
         <div
-            class="flex flex-col md:flex-row justify-between items-center border-t border-gray-200 mt-6 pt-3"
+            class="flex flex-col md:flex-row justify-between items-center border-t border-gray-200 mt-6 pt-3 px-2"
         >
             <p class="text-gray-300 text-sm">
-                &copy; 2024 Your Company. All rights reserved.
+                &copy; 2024 Cámara de la Gente. Todos los derechos reservados.
             </p>
-            <div class="mt- md:mt-0 flex space-x-6 items-center">
+            <div class="flex space-x-6 items-center">
                 <a
                     href="https://www.instagram.com/camaradelagente/"
                     aria-label="Instagram de la camara de la gente"
