@@ -3,6 +3,8 @@ import InstagramIcon from "../icons/InstagramIcon.astro";
 import FacebookIcon from "../icons/FacebookIcon.astro";
 import XIcon from "../icons/XIcon.astro";
 import EarthIcon from "../icons/EarthIcon.astro";
+import { Image } from "astro:assets";
+import logoImage from "../images/logo_pch_blanco.png";
 ---
 
 <header
@@ -10,11 +12,11 @@ import EarthIcon from "../icons/EarthIcon.astro";
 >
 	<section class="container m-auto h-full flex justify-between items-center">
 		<picture class="flex gap-1 items-center">
-			<img
-				src="/src/images/logo_pch_blanco.png"
+			<Image
+				src={logoImage}
 				alt="Logo la cámara de la gente PCH"
-				width="52px"
-				height="52px"
+				width="52"
+				height="52"
 			/>
 			<p>Cámara de la Gente</p>
 		</picture>
@@ -26,20 +28,29 @@ import EarthIcon from "../icons/EarthIcon.astro";
 						<a href="/" class="relative block px-2 py-1">Inicio</a>
 					</li>
 					<li>
-						<a href="/nosotros" class="relative block px-2 py-1">Nosotros</a>
-					</li>
-					<li>
-						<a href="/servicios" class="relative block px-2 py-1">Servicios</a>
-					</li>
-					<li>
-						<a href="/tecnologia" class="relative block px-2 py-1">Tecnología</a
+						<a href="/nosotros" class="relative block px-2 py-1"
+							>Nosotros</a
 						>
 					</li>
 					<li>
-						<a href="/eventos" class="relative block px-2 py-1">Eventos</a>
+						<a href="/servicios" class="relative block px-2 py-1"
+							>Servicios</a
+						>
 					</li>
 					<li>
-						<a href="/ayuda" class="relative block px-2 py-1">Ayuda</a>
+						<a href="/tecnologia" class="relative block px-2 py-1"
+							>Tecnología</a
+						>
+					</li>
+					<li>
+						<a href="/eventos" class="relative block px-2 py-1"
+							>Eventos</a
+						>
+					</li>
+					<li>
+						<a href="/ayuda" class="relative block px-2 py-1"
+							>Ayuda</a
+						>
 					</li>
 				</ul>
 			</nav>
