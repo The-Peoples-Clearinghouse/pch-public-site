@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import sectionOne from "../../src/images/world.svg";
+import sectionTwo from "../../src/images/transfer.svg";
+import sectionThree from "../../src/images/pay_online.svg";
+---
+<p class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl text-center mt-16">Soluciones Tecnológicas para la Banca Popular y Cooperativa</p>
+<div class="flex flex-col items-center lg:flex-row lg:justify-center space-y-4 lg:space-y-0 lg:space-x-6 mt-16">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs flex flex-col items-center">
+        <Image
+		src={sectionOne}
+		alt="Red para Ahorro y Crédito Popular"
+		loading="eager"
+		class="h-60 w-60"
+	/>
+        <h3 class="text-xl font-semibold">Red para Ahorro y Crédito Popular</h3>
+        <p>La Cámara de la Gente es una red transaccional para las entidades del sector ahorro y crédito popular y cooperativo.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs flex flex-col items-center">
+        <Image
+		src={sectionTwo}
+		alt="Red para Ahorro y Crédito Popular"
+		loading="eager"
+		class="h-60 w-60"
+	/>
+        <h3 class="text-xl font-semibold">Transferencias en Tiempo Real</h3>
+        <p>Los socios y clientes de tu entidad podrán utilizar su teléfono celular para transferir fondos en tiempo real a otras entidades financieras.</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs flex flex-col items-center">
+        <Image
+		src={sectionThree}
+		alt="Red para Ahorro y Crédito Popular"
+		loading="eager"
+		class="h-60 w-60"
+	/>
+        <h3 class="text-xl font-semibold">Conexión al SPEI</h3>
+        <p>Tu entidad también podrá conectarse al SPEI, recibir remesas a cuenta en tiempo real, cobrar servicios y tiempo aire, entre otros servicios tecnológicos.</p>
+    </div>
+</div>
