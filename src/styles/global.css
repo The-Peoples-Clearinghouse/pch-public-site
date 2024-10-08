@@ -54,6 +54,18 @@ header {
 		}
 
 	}
+
+	#header_options {
+		transition: left 200ms ease-in-out;
+	}
+
+	#header_options.open {
+		left: 0px;
+	}
+
+	#header_burger.open {
+		z-index: 20;
+	}
 }
 
 

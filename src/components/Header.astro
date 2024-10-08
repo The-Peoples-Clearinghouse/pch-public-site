@@ -11,7 +11,7 @@ import logoImage from "../images/logo_pch_blanco.png";
 	id="header"
 	class="fixed z-50 top-0 w-full h-20 bg-transparent text-white xl:text-lg font-bold"
 >
-	<section class="container m-auto h-full flex justify-between items-center">
+	<section class="container m-auto h-full flex justify-between items-center px-2 pr-4 lg:pr-2">
 		<picture class="flex gap-1 items-center">
 			<Image
 				src={logoImage}
@@ -22,9 +22,14 @@ import logoImage from "../images/logo_pch_blanco.png";
 			<p>Cámara de la Gente</p>
 		</picture>
 
-		<div class="items-center gap-8 hidden lg:flex">
+		<button id="header_burger" class="flex flex-col gap-[6px] lg:hidden">
+			<span class="w-[30px] h-[3px] rounded-full bg-white block"></span>
+			<span class="w-[30px] h-[3px] rounded-full bg-white block"></span>
+			<span class="w-[30px] h-[3px] rounded-full bg-white block"></span>
+		</button>
+		<div id="header_options" class="flex items-center gap-8 pt-20 flex-col absolute top-0 bottom-0 left-[110vw] w-screen h-screen bg-primary py-6 lg:py-0 lg:bg-inherit lg:w-auto lg:h-auto lg:static lg:flex-row lg:pt-0">
 			<nav>
-				<ul class="flex gap-1">
+				<ul class="flex flex-col gap-3 items-center lg:flex-row lg:gap-1">
 					<li>
 						<a href="/" class="relative block px-2 py-1">Inicio</a>
 					</li>
@@ -73,7 +78,7 @@ import logoImage from "../images/logo_pch_blanco.png";
 
 			<button role="button" class="flex gap-1 items-center">
 				<EarthIcon width="1.2rem" height="1.2rem" />
-				<p>ES</p>
+				<p class="pt-[1px]">ES</p>
 			</button>
 		</div>
 	</section>
@@ -97,4 +102,14 @@ import logoImage from "../images/logo_pch_blanco.png";
 			header.style.setProperty("--header-opacity", "0");
 		}
 	});
+
+	const headerBurger = document.getElementById("header_burger");
+	const headerOptions = document.getElementById("header_options");
+
+	if (headerBurger && headerOptions) {
+		headerBurger.addEventListener("click", () => {
+			headerBurger.classList.toggle("open");
+			headerOptions.classList.toggle("open");
+		});
+	}
 </script>
