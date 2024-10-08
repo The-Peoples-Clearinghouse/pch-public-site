@@ -1,21 +1,21 @@
 ---
 import { Image } from "astro:assets";
-import sectionOne from "../../src/images/world.svg";
-import sectionTwo from "../../src/images/transfer.svg";
-import sectionThree from "../../src/images/pay_online.svg";
+import sectionOne from "../../images/world.svg";
+import sectionTwo from "../../images/transfer.svg";
+import sectionThree from "../../images/pay_online.svg";
 ---
 
-<section class="mb-20">
+<section class="mb-20 lg:mb-40">
     <h2
-        class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center"
+        class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center px-2"
     >
         Soluciones Tecnológicas para la Banca Popular y Cooperativa
     </h2>
     <div
-        class="flex flex-col items-center lg:flex-row lg:justify-center space-y-4 lg:space-y-0 lg:space-x-6 mt-10"
+        class="flex items-center flex-wrap flex-row justify-center gap-10 mt-10"
     >
         <div
-            class="bg-white p-6 rounded-lg shadow-lg max-w-xs flex flex-col items-center space-y-3"
+            class="bg-white p-6 rounded-2xl shadow-lg max-w-xs flex flex-col items-center space-y-3"
         >
             <Image
                 src={sectionOne}
@@ -26,13 +26,13 @@ import sectionThree from "../../src/images/pay_online.svg";
             <h3 class="text-xl font-semibold text-center">
                 Red para Ahorro y Crédito Popular
             </h3>
-            <p>
+            <p class="text-center md:text-left">
                 La Cámara de la Gente es una red transaccional para las
                 entidades del sector ahorro y crédito popular y cooperativo.
             </p>
         </div>
         <div
-            class="bg-white p-6 rounded-lg shadow-lg max-w-xs flex flex-col items-center space-y-3"
+            class="bg-white p-6 rounded-2xl shadow-lg max-w-xs flex flex-col items-center space-y-3"
         >
             <Image
                 src={sectionTwo}
@@ -43,14 +43,14 @@ import sectionThree from "../../src/images/pay_online.svg";
             <h3 class="text-xl font-semibold text-center">
                 Transferencias en Tiempo Real
             </h3>
-            <p>
+            <p class="text-center md:text-left">
                 Los socios y clientes de tu entidad podrán utilizar su teléfono
                 celular para transferir fondos en tiempo real a otras entidades
                 financieras.
             </p>
         </div>
         <div
-            class="bg-white p-6 rounded-lg shadow-lg max-w-xs flex flex-col items-center space-y-3"
+            class="bg-white p-6 rounded-2xl shadow-lg max-w-xs flex flex-col items-center space-y-3"
         >
             <Image
                 src={sectionThree}
@@ -59,7 +59,7 @@ import sectionThree from "../../src/images/pay_online.svg";
                 class="h-60 w-60"
             />
             <h3 class="text-xl font-semibold text-center">Conexión al SPEI</h3>
-            <p>
+            <p class="text-center md:text-left">
                 Tu entidad también podrá conectarse al SPEI, recibir remesas a
                 cuenta en tiempo real, cobrar servicios y tiempo aire, entre
                 otros servicios tecnológicos.
