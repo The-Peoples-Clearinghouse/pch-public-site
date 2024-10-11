@@ -11,15 +11,15 @@ import imgFive from "../images/nfc.png";
 ---
 
 <Layout title="La cámara de la gente">
-<Banner />
+<Banner  title="Servicios" />
  <section class="mb-20 sm:pb-20 mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
   <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl text-center mb-5">Casos de uso</h2>
   <p class="text-center">La Cámara de la Gente impulsa los pagos digitales entre dispositivos móviles de clientes de entidades, de manera eficiente y segura. </p>
-  <div class="grid grid-cols-3 gap-4 mt-10">
+  <div class="grid log:grid-cols-3 gap-4 mt-10">
     <div class="lg:row-span-2 bg-white rounded-lg shadow ring-1 ring-black/5 lg:rounded-tl-[2rem]">
       <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">        
         <p class="mt-2 text-lg/7 font-medium text-gray-950 max-lg:text-center">Transferencias G2P</p>
-        <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Una entidad gubernamental puede pagar apoyos directo a clientes de 
+        <p class="mt-2 max-w-lg text-gray-600 max-lg:text-center">Una entidad gubernamental puede pagar apoyos directo a clientes de 
           una entidad ruteando las transacciones con el número celular de los clientes
         </p>
         <Image
@@ -33,59 +33,63 @@ import imgFive from "../images/nfc.png";
     <div class=" bg-white rounded-lg shadow ring-1 ring-black/5">
       <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
         <p class="mt-2 text-lg/7 font-medium text-gray-950 max-lg:text-center">Transferencias P2P</p>
-        <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Un cliente de una entidad puede pagar al cliente de otra entidad, 
+        <p class="mt-2 max-w-lg text-gray-600 max-lg:text-center">Un cliente de una entidad puede pagar al cliente de otra entidad, 
           usando su teléfono celular (mediante App, QR, NFC)
         </p>
-        <Image
-          src={imgTwo}
-          alt="Red para Ahorro y Crédito Popular"
-          loading="eager"
-          class="h-30 w-30 my-7"
-      />
+        
+        <div class="flex justify-center sm:justify-start">
+          <Image
+            src={imgTwo}
+            alt="Red para Ahorro y Crédito Popular"
+            loading="eager"
+            class="h-20 w-20 my-7"
+          />
+        </div>
       </div> 
     </div>
     <div class="lg:row-span-2 bg-white rounded-lg shadow ring-1 ring-black/5 lg:rounded-tr-[2rem]">
       <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
         <p class="mt-2 text-lg/7 font-medium text-gray-950 max-lg:text-center">Transferencias PISP</p>
-        <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Un cliente de una entidad que no tiene su propia app, puede utilizar el servicio de la Cámara 
+        <p class="mt-2 max-w-lg text-gray-600 max-lg:text-center">Un cliente de una entidad que no tiene su propia app, puede utilizar el servicio de la Cámara 
           para iniciar pagos sin necesidad de una app propia de la entidad</p>
         <Image
           src={imgFour}
           alt="Red para Ahorro y Crédito Popular"
           loading="eager"
-          class="h-full w-full my-10"
+          class="h-full w-full mt-20"
       />
       </div> 
     </div>
     <div class="bg-white rounded-lg shadow ring-1 ring-black/5">
       <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
         <p class="mt-2 text-lg/7 font-medium text-gray-950 max-lg:text-center">Transferencias P2B</p>
-        <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Un cliente de una entidad puede pagar a un negocio cliente de otra entidad, 
+        <p class="mt-2 max-w-lg text-gray-600 max-lg:text-center">Un cliente de una entidad puede pagar a un negocio cliente de otra entidad, 
           usando su teléfono celular (mediante App, QR, NFC).
         </p>
-        <Image
-        src={imgFive}
-        alt="Red para Ahorro y Crédito Popular"
-        loading="eager"
-        class="h-20 w-20 my-7"
-    />
+        <div class="flex justify-center sm:justify-start">
+          <Image
+            src={imgFive}
+            alt="Red para Ahorro y Crédito Popular"
+            loading="eager"
+            class="h-20 w-20 my-7"
+          />
+        </div>
       </div> 
     </div>
     
-    <div class="col-span-3 bg-white rounded-lg shadow ring-1 ring-black/5 lg:rounded-b-[2rem]">
-      <div class="px-8 pb-3 pt-8 grid grid-cols-2">
+    <div class="lg:col-span-3 bg-white rounded-lg shadow ring-1 ring-black/5 lg:rounded-b-[2rem]">
+      <div class="px-8 pt-8 grid lg:grid-cols-2 gap-20 pb-10">
         <div>
           <p class="mt-2 text-lg/7 font-medium text-gray-950 max-lg:text-center">Corresponsalías</p>
-        <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Un cliente de una entidad puede ofrecer el servicio de corresponsalía 
+          <p class="mt-2 max-w-lg text-gray-600 max-lg:text-center">Un cliente de una entidad puede ofrecer el servicio de corresponsalía 
           (cash-in, cash-out, pago de servicios/tiempo aire) a otros clientes de esa u otras entidades.</p>
         </div>      
           <Image
           src={imgThree}
           alt="Red para Ahorro y Crédito Popular"
           loading="eager"
-          class="h-40 w-h-40 mb-10"
-      />
-     
+          class="h-44 w-auto"
+          />     
       </div> 
     </div>
   </div>

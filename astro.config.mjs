@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://The-Peoples-Clearinghouse.github.io',
-  base: 'pch-web-page',
+  base: '/pch-web-page',
 });
