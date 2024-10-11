@@ -11,7 +11,9 @@ import logoImage from "../images/logo_pch_blanco.png";
 	id="header"
 	class="fixed z-50 top-0 w-full h-20 bg-transparent text-white xl:text-lg font-bold"
 >
-	<section class="container m-auto h-full flex justify-between items-center px-2 pr-4 lg:pr-2">
+	<section
+		class="container m-auto h-full flex justify-between items-center px-2 pr-4 lg:pr-2"
+	>
 		<picture class="flex gap-1 items-center">
 			<Image
 				src={logoImage}
@@ -27,27 +29,41 @@ import logoImage from "../images/logo_pch_blanco.png";
 			<span class="w-[30px] h-[3px] rounded-full bg-white block"></span>
 			<span class="w-[30px] h-[3px] rounded-full bg-white block"></span>
 		</button>
-		<div id="header_options" class="flex items-center gap-8 pt-20 flex-col absolute top-0 bottom-0 left-[110vw] w-screen h-screen bg-primary py-6 lg:py-0 lg:bg-inherit lg:w-auto lg:h-auto lg:static lg:flex-row lg:pt-0">
+		<div
+			id="header_options"
+			class="flex items-center gap-8 pt-20 flex-col absolute top-0 bottom-0 left-[110vw] w-screen h-screen bg-primary py-6 lg:py-0 lg:bg-inherit lg:w-auto lg:h-auto lg:static lg:flex-row lg:pt-0"
+		>
 			<nav>
-				<ul class="flex flex-col gap-3 items-center lg:flex-row lg:gap-1">
+				<ul
+					class="flex flex-col gap-3 items-center lg:flex-row lg:gap-1"
+				>
 					<li>
 						<a href="/" class="relative block px-2 py-1">Inicio</a>
 					</li>
 					<li>
-						<a href="/nosotros" class="relative block px-2 py-1">Nosotros</a>
-					</li>
-					<li>
-						<a href="/servicios" class="relative block px-2 py-1">Servicios</a>
-					</li>
-					<li>
-						<a href="/tecnologia" class="relative block px-2 py-1">Tecnología</a
+						<a href="/nosotros" class="relative block px-2 py-1"
+							>Nosotros</a
 						>
 					</li>
 					<li>
-						<a href="/eventos" class="relative block px-2 py-1">Eventos</a>
+						<a href="/servicios" class="relative block px-2 py-1"
+							>Servicios</a
+						>
 					</li>
 					<li>
-						<a href="/ayuda" class="relative block px-2 py-1">Ayuda</a>
+						<a href="/tecnologia" class="relative block px-2 py-1"
+							>Tecnología</a
+						>
+					</li>
+					<li>
+						<a href="/eventos" class="relative block px-2 py-1"
+							>Eventos</a
+						>
+					</li>
+					<li>
+						<a href="/ayuda" class="relative block px-2 py-1"
+							>Ayuda</a
+						>
 					</li>
 				</ul>
 			</nav>
@@ -88,18 +104,25 @@ import logoImage from "../images/logo_pch_blanco.png";
 	const header = document.getElementById("header");
 	const headerHeight = 80;
 	const bannerHeight = 650;
+	const isHomePage = window.location.pathname === "/";
 
 	if (header && window.scrollY > bannerHeight - headerHeight) {
+		header.style.setProperty("--header-opacity", "0.95");
+	}
+
+	if(header && !isHomePage){
 		header.style.setProperty("--header-opacity", "0.95");
 	}
 
 	window.addEventListener("scroll", () => {
 		if (!header) return;
 
-		if (window.scrollY > bannerHeight - headerHeight) {
-			header.style.setProperty("--header-opacity", "0.95");
-		} else {
-			header.style.setProperty("--header-opacity", "0");
+		if (isHomePage) {
+			if (window.scrollY > bannerHeight - headerHeight) {
+				header.style.setProperty("--header-opacity", "0.95");
+			} else {
+				header.style.setProperty("--header-opacity", "0");
+			}
 		}
 	});
 
@@ -112,4 +135,7 @@ import logoImage from "../images/logo_pch_blanco.png";
 			headerOptions.classList.toggle("open");
 		});
 	}
+
+	const curretAnchor = document.querySelector(`#header nav a[href="${window.location.pathname}"]`);
+	curretAnchor?.classList.add("active");
 </script>
