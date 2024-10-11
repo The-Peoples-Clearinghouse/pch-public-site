@@ -136,11 +136,6 @@ import logoImage from "../images/logo_pch_blanco.png";
 		});
 	}
 
-	const navLinks = document.querySelectorAll("a");
-
-	navLinks.forEach(link => {
-	if (link.getAttribute("href") === window.location.pathname) {
-		link.classList.add("active");
-	}
-	});
+	const curretAnchor = document.querySelector(`#header nav a[href="${window.location.pathname}"]`);
+	curretAnchor?.classList.add("active");
 </script>
