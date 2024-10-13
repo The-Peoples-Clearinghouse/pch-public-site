@@ -5,7 +5,9 @@ import two from "../../images/gallery_two.webp";
 import three from "../../images/gallery_three.webp";
 import four from "../../images/gallery_four.webp";
 import five from "../../images/gallery_five.webp";
+import "lite-youtube-embed/src/lite-yt-embed.css"
 ---
+<script is:inline src="/node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script>
 
 <section class="grid grid-cols-3 gap-4 p-4 mb-20"> 
     <div class="rounded-lg overflow-hidden shadow-lg">
@@ -17,13 +19,12 @@ import five from "../../images/gallery_five.webp";
     </div>
 
     <div class="rounded-lg overflow-hidden shadow-lg">
-      <iframe
+      <lite-youtube
+        videoid="1J3SqW7Lia4"
+        playlabel="Reproducir: Introducción a La cámara de la gente"
+        title="Introducción a la cámara de la gente"
         class="w-full h-full"
-        src="https://www.youtube.com/embed/1J3SqW7Lia4"
-        title="YouTube video"
-        loading="lazy"
-      >
-      </iframe>
+      ></lite-youtube>
     </div>
 
     <div class="rounded-lg overflow-hidden shadow-lg">
