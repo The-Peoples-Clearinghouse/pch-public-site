@@ -6,4 +6,15 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://lacamara.mx',
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    fallback: {
+      en: 'es',
+    },
+    routing: {
+      prefixDefaultLocale: false,
+      fallbackType: 'rewrite',
+    }
+  }
 });

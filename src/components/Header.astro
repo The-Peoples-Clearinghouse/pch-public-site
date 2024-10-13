@@ -2,6 +2,11 @@
 import EarthIcon from "../icons/EarthIcon.astro";
 import { Image } from "astro:assets";
 import logoImage from "../images/logo_pch_blanco.png";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const lang = getLangFromUrl(Astro.currentLocale as string);
+const t = useTranslations(lang);
 ---
 
 <header
@@ -19,7 +24,7 @@ import logoImage from "../images/logo_pch_blanco.png";
 				height="52"
 				loading="eager"
 			/>
-			<p class="hidden lg:block">Cámara de la Gente</p>
+			<p class="hidden lg:block">{t('header.company')}</p>
 		</picture>
 
 		<button id="header_burger" class="flex flex-col gap-[6px] md:hidden" aria-label="menú desplegable">
@@ -36,31 +41,31 @@ import logoImage from "../images/logo_pch_blanco.png";
 					class="flex flex-col gap-2 items-center md:flex-row lg:gap-4"
 				>
 					<li>
-						<a href="/" class="relative block px-2 py-1">Inicio</a>
+						<a href={getRelativeLocaleUrl(lang)} class="relative block px-2 py-1">{t('nav.home')}</a>
 					</li>
 					<li>
-						<a href="/nosotros" class="relative block px-2 py-1"
-							>Nosotros</a
+						<a href={getRelativeLocaleUrl(lang, 'nosotros')} class="relative block px-2 py-1"
+							>{t('nav.about')}</a
 						>
 					</li>
 					<li>
-						<a href="/servicios" class="relative block px-2 py-1"
-							>Servicios</a
+						<a href={getRelativeLocaleUrl(lang, 'servicios')} class="relative block px-2 py-1"
+							>{t('nav.services')}</a
 						>
 					</li>
 					<li>
-						<a href="/tecnologia" class="relative block px-2 py-1"
-							>Tecnología</a
+						<a href={getRelativeLocaleUrl(lang, 'tecnologia')} class="relative block px-2 py-1"
+							>{t('nav.technology')}</a
 						>
 					</li>
 					<li>
-						<a href="/eventos" class="relative block px-2 py-1"
-							>Eventos</a
+						<a href={getRelativeLocaleUrl(lang, 'eventos')} class="relative block px-2 py-1"
+							>{t('nav.events')}</a
 						>
 					</li>
 					<li>
-						<a href="/ayuda" class="relative block px-2 py-1"
-							>Ayuda</a
+						<a href={getRelativeLocaleUrl(lang, 'ayuda')} class="relative block px-2 py-1"
+							>{t('nav.help')}</a
 						>
 					</li>
 				</ul>
