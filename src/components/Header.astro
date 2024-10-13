@@ -1,7 +1,4 @@
 ---
-import InstagramIcon from "../icons/InstagramIcon.astro";
-import FacebookIcon from "../icons/FacebookIcon.astro";
-import XIcon from "../icons/XIcon.astro";
 import EarthIcon from "../icons/EarthIcon.astro";
 import { Image } from "astro:assets";
 import logoImage from "../images/logo_pch_blanco.png";
@@ -20,22 +17,23 @@ import logoImage from "../images/logo_pch_blanco.png";
 				alt="Logo la cámara de la gente PCH"
 				width="52"
 				height="52"
+				loading="eager"
 			/>
-			<p>Cámara de la Gente</p>
+			<p class="hidden lg:block">Cámara de la Gente</p>
 		</picture>
 
-		<button id="header_burger" class="flex flex-col gap-[6px] lg:hidden">
+		<button id="header_burger" class="flex flex-col gap-[6px] md:hidden" aria-label="menú desplegable">
 			<span class="w-[30px] h-[3px] rounded-full bg-white block"></span>
 			<span class="w-[30px] h-[3px] rounded-full bg-white block"></span>
 			<span class="w-[30px] h-[3px] rounded-full bg-white block"></span>
 		</button>
 		<div
 			id="header_options"
-			class="flex items-center gap-8 pt-20 flex-col absolute top-0 bottom-0 left-[110vw] w-screen h-screen bg-primary py-6 lg:py-0 lg:bg-inherit lg:w-auto lg:h-auto lg:static lg:flex-row lg:pt-0"
+			class="flex items-center gap-8 pt-20 flex-col absolute top-0 bottom-0 left-[110vw] w-screen h-screen bg-primary py-6 md:py-0 md:bg-inherit md:w-auto md:h-auto md:static md:flex-row md:pt-0"
 		>
 			<nav>
 				<ul
-					class="flex flex-col gap-3 items-center lg:flex-row lg:gap-1"
+					class="flex flex-col gap-2 items-center md:flex-row lg:gap-4"
 				>
 					<li>
 						<a href="/" class="relative block px-2 py-1">Inicio</a>
@@ -67,30 +65,6 @@ import logoImage from "../images/logo_pch_blanco.png";
 					</li>
 				</ul>
 			</nav>
-
-			<div class="flex gap-2">
-				<a
-					href="https://www.instagram.com/camaradelagente/"
-					aria-label="Instagram de la camara de la gente"
-					target="_blank"
-				>
-					<InstagramIcon width="1.2rem" height="1.2rem" />
-				</a>
-				<a
-					href="https://www.facebook.com/CamaraDeLaGente/"
-					aria-label="Facebook de la camara de la gente"
-					target="_blank"
-				>
-					<FacebookIcon width="1.2rem" height="1.2rem" />
-				</a>
-				<a
-					href="https://x.com/CamaraGente"
-					aria-label="X twitter de la camara de la gente"
-					target="_blank"
-				>
-					<XIcon width="1.2rem" height="1.2rem" />
-				</a>
-			</div>
 
 			<button role="button" class="flex gap-1 items-center">
 				<EarthIcon width="1.2rem" height="1.2rem" />
