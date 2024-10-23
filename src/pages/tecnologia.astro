@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import diagramOne from "../images/diagram_1.jpg";
+import diagramTwo from "../images/diagram_2.jpg";
+import diagramThree from "../images/diagram_3.jpg";
+---
+
+<Layout title="La Cámara de la Gente">
+  <section class="mx-auto max-w-7xl my-16 md:px-10 md:py-20">
+    <h2 class="font-bold md:text-5xl my-5 text-center">Tecnología</h2>
+    <p class="text-s sm:text-base text-center">
+      La Cámara de la Gente implementa software financiero de última generación
+      basado en código abierto, que utiliza tecnologías de transferencia
+      eficientes y seguras, dando prioridad a la privacidad de la información de
+      los participantes y sus clientes.
+    </p>
+
+    <div class="grid lg:grid-cols-3 items-center mt-20 gap-5">
+      <div class="p-10 rounded-md border-t-8 border-primary shadow-md">
+        <h2 class="text-2xl font-bold">VNext</h2>
+        <p class="text-sm text-gray-500 sm:text-base">
+          Para interconectar a las entidades, la Cámara de la Gente utiliza una
+          plataforma de compensación basada en Mojaloop vNext, un software
+          desarrollado por la Fundación Mojaloop para promover la inclusión
+          financiera en todo el mundo.
+          <br /><br />
+          Adaptada al contexto regulatorio mexicano y a las necesidades del sector,
+          la plataforma integra a las entidades financieras como participantes y
+          registra de forma segura las transferencias entre sus clientes y socios.
+          <br /><br />
+          La arquitectura de nuestra plataforma puede resumirse en el siguiente diagrama:
+        </p>
+      </div>
+      <div class="rounded-3xl bg-white p-2 shadow-2xl col-span-2">
+        <p>
+          <Image
+            src={diagramOne}
+            alt="img"
+            class="h-full w-full object-cover overflow-hidden"
+          />
+        </p>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 items-center mt-32 gap-5">
+      <div class="rounded-3xl bg-white p-2 shadow-2xl col-span-2">
+        <p>
+          <Image
+            src={diagramTwo}
+            alt="img"
+            class="h-full w-full object-cover overflow-hidden"
+          />
+        </p>
+      </div>
+
+      <div class="p-10 rounded-md border-t-8 border-primary shadow-md">
+        <h2 class="text-2xl font-bold">Rafiki</h2>
+        <p class="text-sm text-gray-500 sm:text-base">
+          Para ofrecer remesas internacionales, la Cámara de la Gente integra un
+          Transmisor de Dinero, el cual utiliza la tecnología Rafiki de la
+          Fundación Interledger para registrar obligaciones de pago viniendo de
+          entidades en el extranjero en tiempo real, siguiendo los estándares
+          nacionales e internacionales de PLD.
+          <br /><br />
+          Para poder gestionar transferencias instantáneas, el Transmisor convierte
+          las instrucciones de pago Rafiki en instrucciones de pago de la plataforma
+          de compensación vNext, que son acreditadas en cuestión de segundos en las
+          cuentas de clientes y socios de las entidades correspondientes.
+          <br /><br />
+          El proceso del Transmisor de Dinero Rafiki puede resumirse en el siguiente
+          diagrama:
+        </p>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-3 items-center mt-32 gap-2 rounded-2xl mb-2">
+      <div class="p-10 rounded-md border-t-8 border-primary shadow-md">
+        <h2 class="text-2xl font-bold">Seguridad</h2>
+        <p class="text-sm text-gray-500 sm:text-base">
+          La Cámara de la Gente implementa tecnologías de punta en cuanto a
+          seguridad de la información para resguardar la privacidad, fiabilidad
+          e inmutabilidad de las instrucciones de pago que pasan por su
+          plataforma. 
+          <br><br>
+          En particular, la Cámara de la Gente implementa:
+        </p>
+      </div>
+
+      <div class="rounded-3xl text-center col-span-2 py-3">
+        <div class="grid grid-cols-3 gap-2">
+          <div class="shadow-md rounded-md p-5">
+            <h2 class="font-bold">mTLS</h2>
+            <p class="text-sm text-gray-500 sm:text-base">
+              Protocolo de capa de transporte que autentica tanto al cliente
+              como al servidor de forma segura.
+            </p>
+          </div>
+          <div class="shadow-md rounded-md p-5">
+            <h2 class="font-bold">OAuth 2.0</h2>
+            <p class="text-sm text-gray-500 sm:text-base">
+              Protocolo que establece un framework de autorización
+              para delegar accesos a recursos específicos.
+            </p>
+          </div>
+          <div class="shadow-md rounded-md p-5">
+            <h2 class="font-bold">JWT (JSON Web Tokens)</h2>
+            <p class="text-sm text-gray-500 sm:text-base">
+              Estándar para utilizar tokens con el fin de
+              autenticar el intercambio de información.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 mt-5 gap-2">
+          <div class="shadow-md rounded-md p-5">
+            <h2 class="font-bold">RBAC (Role-based Access Control)</h2>
+            <p class="text-sm text-gray-500 sm:text-base">
+              Control de acceso segmentado por roles, mediante certificados de
+              autenticación.
+            </p>
+          </div>
+          <div class="shadow-md rounded-md p-5">
+            <h2 class="font-bold">Marco de trabajo “Zero trust security”</h2>
+            <p class="text-sm text-gray-500 sm:text-base">
+              Requerimiento de que todo usuario y todo servicio de la
+              plataforma, sean autenticados, autorizados y continuamente
+              validados antes de obtener o mantener acceso a aplicaciones e
+              información de cualquier parte de la plataforma.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-3xl bg-white p-2 shadow-2xl">
+      <p>
+        <Image
+          src={diagramThree}
+          alt="img"
+          class="h-full w-full object-cover overflow-hidden"
+        />
+      </p>
+    </div>
+  </section>
+</Layout>
