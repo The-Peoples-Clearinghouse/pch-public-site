@@ -6,6 +6,10 @@ import three from "../../images/gallery_three.webp";
 import four from "../../images/gallery_four.webp";
 import five from "../../images/gallery_five.webp";
 import "lite-youtube-embed/src/lite-yt-embed.css"
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.currentLocale as string);
+const t = useTranslations(lang);
 ---
 <script is:inline src="/scripts/lite-yt-embed.js"></script>
 
@@ -20,9 +24,9 @@ import "lite-youtube-embed/src/lite-yt-embed.css"
 
     <div class="rounded-lg overflow-hidden shadow-lg">
       <lite-youtube
-        videoid="1J3SqW7Lia4"
+        videoid={t('home.media.video.id')}
         playlabel="Reproducir: Introducción a La cámara de la gente"
-        title="Introducción a la cámara de la gente"
+        title={t('home.media.title')}
         class="w-full h-full"
       ></lite-youtube>
     </div>

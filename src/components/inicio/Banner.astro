@@ -1,6 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import bannerImage from "../../images/banner.webp";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.currentLocale as string);
+const t = useTranslations(lang);
 ---
 
 <section class="w-full h-[650px] relative mb-20 lg:mb-40" id="banner">
@@ -13,7 +17,7 @@ import bannerImage from "../../images/banner.webp";
 	<div id="filter" class="-z-10 absolute inset-0 bg-gradient"></div>
 	<div class="container m-auto z-30 h-full flex items-center">
 		<h1 class="hidden sm:block sm:text-6xl md:text-7xl text-white font-bold w-full sm:w-2/5 text-balance pl-2">
-			Cámara de la Gente
+			{t('header.company')}
 		</h1>
 	</div>
 </section>
