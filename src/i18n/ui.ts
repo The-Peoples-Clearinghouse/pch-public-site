@@ -94,6 +94,9 @@ export const ui = {
 		'tech.4.4.text': "Control de acceso segmentado por roles, mediante certificados de autenticación.",
 		'tech.4.5.title': "Marco de trabajo “Zero trust security”",
 		'tech.4.5.text': "Requerimiento de que todo usuario y todo servicio de la plataforma, sean autenticados, autorizados y continuamente validados antes de obtener o mantener acceso a aplicaciones e información de cualquier parte de la plataforma.",
+		'404.title': "Página no encontrada",
+		'404.text': "Lo sentimos, no pudimos encontrar la página que estás buscando.",
+		'404.home': "Ir al inicio"
 	},
 	en: {
 		'header.company': "People's Clearinghouse",
@@ -178,6 +181,9 @@ export const ui = {
 		'tech.4.4.title': "RBAC (Role-based Access Control)",
 		'tech.4.4.text': "Segmented access control by roles, using authentication certificates.",
 		'tech.4.5.title': "“Zero trust security” framework",
-		'tech.4.5.text': "Requirement that every user and every service on the platform be authenticated, authorized and continually validated before obtaining or maintaining access to applications and information in any part of the platform."
+		'tech.4.5.text': "Requirement that every user and every service on the platform be authenticated, authorized and continually validated before obtaining or maintaining access to applications and information in any part of the platform.",
+		'404.title': "Page not found",
+		'404.text': "Sorry, we could not find the page you are looking for.",
+		'404.home': "Go home"
 	},
 } as const;
