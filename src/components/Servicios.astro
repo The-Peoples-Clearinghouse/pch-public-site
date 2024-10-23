@@ -1,0 +1,121 @@
+---
+import { Image } from "astro:assets";
+import imgOne from "../images/mobile_pay.svg";
+import imgTwo from "../images/codigo_qr.png";
+import imgThree from "../images/chat_bot.svg";
+import imgFour from "../images/services.svg";
+import imgFive from "../images/nfc.png";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.currentLocale as string);
+const t = useTranslations(lang);
+---
+
+<section class="my-32 sm:pb-20 mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+	<h2
+		class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center px-2"
+	>
+		{t("home.useCases.title")}
+	</h2>
+	<p class="my-5 text-lg/7 font-medium text-gray-950 text-center">
+		{t("home.useCases.text")}
+	</p>
+	<div class="grid log:grid-cols-3 gap-4 mt-10">
+		<div
+			class="lg:row-span-2 bg-white rounded-lg shadow ring-1 ring-black/5 lg:rounded-tl-[2rem]"
+		>
+			<div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+				<p class="mt-2 text-lg/7 font-medium text-gray-950 max-lg:text-center">
+					{t("home.useCases.1.title")}
+				</p>
+				<p class="mt-2 max-w-lg text-gray-600 max-lg:text-center">
+					{t("home.useCases.1.text")}
+				</p>
+				<Image
+					src={imgOne}
+					alt="Red para Ahorro y Crédito Popular"
+					loading="eager"
+					class="h-full w-full my-10"
+				/>
+			</div>
+		</div>
+		<div class="bg-white rounded-lg shadow ring-1 ring-black/5">
+			<div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+				<p class="mt-2 text-lg/7 font-medium text-gray-950 max-lg:text-center">
+					{t("home.useCases.2.title")}
+				</p>
+				<p class="mt-2 max-w-lg text-gray-600 max-lg:text-center">
+					{t("home.useCases.2.text")}
+				</p>
+
+				<div class="flex justify-center sm:justify-start">
+					<Image
+						src={imgTwo}
+						alt="Red para Ahorro y Crédito Popular"
+						loading="eager"
+						class="h-20 w-20 my-7"
+					/>
+				</div>
+			</div>
+		</div>
+		<div
+			class="lg:row-span-2 bg-white rounded-lg shadow ring-1 ring-black/5 lg:rounded-tr-[2rem]"
+		>
+			<div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+				<p class="mt-2 text-lg/7 font-medium text-gray-950 max-lg:text-center">
+					{t("home.useCases.3.title")}
+				</p>
+				<p class="mt-2 max-w-lg text-gray-600 max-lg:text-center">
+					{t("home.useCases.3.text")}
+				</p>
+				<Image
+					src={imgFour}
+					alt="Red para Ahorro y Crédito Popular"
+					loading="eager"
+					class="h-full w-full mt-20"
+				/>
+			</div>
+		</div>
+		<div class="bg-white rounded-lg shadow ring-1 ring-black/5">
+			<div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+				<p class="mt-2 text-lg/7 font-medium text-gray-950 max-lg:text-center">
+					{t("home.useCases.4.title")}
+				</p>
+				<p class="mt-2 max-w-lg text-gray-600 max-lg:text-center">
+					{t("home.useCases.4.text")}
+				</p>
+				<div class="flex justify-center sm:justify-start">
+					<Image
+						src={imgFive}
+						alt="Red para Ahorro y Crédito Popular"
+						loading="eager"
+						class="h-20 w-20 my-7"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="lg:col-span-3 bg-white rounded-lg shadow ring-1 ring-black/5 lg:rounded-b-[2rem]"
+		>
+			<div class="px-8 pt-8 grid lg:grid-cols-2 gap-32 pb-10">
+				<div>
+					<p
+						class="mt-2 text-lg/7 font-medium text-gray-950 max-lg:text-center"
+					>
+						{t("home.useCases.5.title")}
+					</p>
+					<p class="mt-2 max-w-lg text-gray-600 max-lg:text-center">
+						{t("home.useCases.5.text")}
+					</p>
+				</div>
+				<Image
+					src={imgThree}
+					alt="Red para Ahorro y Crédito Popular"
+					loading="eager"
+					class="h-44 w-auto"
+				/>
+			</div>
+		</div>
+	</div>
+</section>
