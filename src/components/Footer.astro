@@ -105,6 +105,7 @@ const t = useTranslations(lang);
             "https://api.sender.net/v2/subscribers"
         );
         const form = new FormData(e.target as HTMLFormElement)
+        const emailInput = (e.target as HTMLFormElement).querySelector('input[name="email"]');
         let headers = {
             "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTQ5MTllYjU3OGI5NGQyMzVhODYxM2JjMGI1YjU5ODM1N2EzYTc0YjI2OWZkYjkxN2FiOTlhMWNjZDE1MDE0ZmYzY2NlMWFmYmUwNzA1NTUiLCJpYXQiOiIxNzI5Nzg5NDI4LjA5NjI3NSIsIm5iZiI6IjE3Mjk3ODk0MjguMDk2MjgwIiwiZXhwIjoiNDg4MzM4OTQyOC4wOTQyMDUiLCJzdWIiOiI5MjE2OTAiLCJzY29wZXMiOltdfQ.dD__xvGSq0dBKfosuN1ddCPRLUWizYNOrkg_5zBfdb3Hwy8s7jHPtdd6PpXA1Khc1ECLUzR4eJZ_zTNuXAzypg",
             "Content-Type": "application/json",
@@ -115,9 +116,9 @@ const t = useTranslations(lang);
             "email": form.get("email"),
             "firstname": "Sender",
             "lastname": "Support",
-            "groups": [], 
+            "groups": ["bDPZ5K"], 
             "fields": {},
-            "phone": "+529514656449",
+            "phone": "",
             "trigger_automation": false
             };
             fetch(url, {
@@ -125,7 +126,12 @@ const t = useTranslations(lang);
                 headers: headers,
                 body: JSON.stringify(data)
                 }).then(response => response.json())
-                .then(result => console.log(result))
+                .then(result =>{
+                    if (emailInput instanceof HTMLInputElement) {
+                        emailInput.value = '';
+                    }
+                    console.log(result)
+                })
                 .catch(error => console.error('Error:', error));
             });
   </script>
