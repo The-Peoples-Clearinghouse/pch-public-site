@@ -12,7 +12,7 @@ const t = useTranslations(lang);
 
 <footer class="bg-footer py-3 text-white">
     <div class="container mx-auto">
-        <!-- Imagen con el nombre de la empresa -->
+  
         <picture class="flex gap-2 items-center mb-4 pt-3 px-2">
             <Image
                 src={logoImage}
@@ -23,7 +23,6 @@ const t = useTranslations(lang);
             <p>{t('footer.company')}</p>
         </picture>
 
-        <!-- Sección principal del footer -->
         <div
             class="flex flex-col md:flex-row gap-8 border-t border-gray-200 pt-8 px-4"
         >
@@ -51,8 +50,9 @@ const t = useTranslations(lang);
                 <p class="mb-4">
                     {t('footer.stayInTouchText')}
                 </p>
-                <form class="flex flex-col gap-4">
+                <form class="flex flex-col gap-4" id="suscribeForm">
                     <input
+                        name="email"
                         type="email"
                         placeholder={t('footer.email')}
                         class="p-3 rounded bg-gray-100 text-gray-900"
@@ -97,3 +97,35 @@ const t = useTranslations(lang);
         </div>
     </div>
 </footer>
+<script>
+
+      document.getElementById("suscribeForm")?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const url = new URL(
+            "https://api.sender.net/v2/subscribers"
+        );
+        const form = new FormData(e.target as HTMLFormElement)
+        let headers = {
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTQ5MTllYjU3OGI5NGQyMzVhODYxM2JjMGI1YjU5ODM1N2EzYTc0YjI2OWZkYjkxN2FiOTlhMWNjZDE1MDE0ZmYzY2NlMWFmYmUwNzA1NTUiLCJpYXQiOiIxNzI5Nzg5NDI4LjA5NjI3NSIsIm5iZiI6IjE3Mjk3ODk0MjguMDk2MjgwIiwiZXhwIjoiNDg4MzM4OTQyOC4wOTQyMDUiLCJzdWIiOiI5MjE2OTAiLCJzY29wZXMiOltdfQ.dD__xvGSq0dBKfosuN1ddCPRLUWizYNOrkg_5zBfdb3Hwy8s7jHPtdd6PpXA1Khc1ECLUzR4eJZ_zTNuXAzypg",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        };
+
+        let data = {
+            "email": form.get("email"),
+            "firstname": "Sender",
+            "lastname": "Support",
+            "groups": [], 
+            "fields": {},
+            "phone": "+529514656449",
+            "trigger_automation": false
+            };
+            fetch(url, {
+                method: "POST",
+                headers: headers,
+                body: JSON.stringify(data)
+                }).then(response => response.json())
+                .then(result => console.log(result))
+                .catch(error => console.error('Error:', error));
+            });
+  </script>
