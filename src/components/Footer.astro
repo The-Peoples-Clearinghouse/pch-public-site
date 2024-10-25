@@ -5,6 +5,7 @@ import XIcon from "../icons/XIcon.astro";
 import { Image } from "astro:assets";
 import logoImage from "../images/logo_pch_blanco.png";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const lang = getLangFromUrl(Astro.currentLocale as string);
 const t = useTranslations(lang);
@@ -27,11 +28,11 @@ const t = useTranslations(lang);
             class="flex flex-col md:flex-row gap-8 border-t border-gray-200 pt-8 px-4"
         >
             <nav class="hidden md:block basis-1/3">
-                <p class="text-lg font-semibold mb-2">{t('nav.home')}</p>
-                <p class="text-lg font-semibold mb-2">{t('nav.about')}</p>
-                <p class="text-lg font-semibold mb-2">{t('nav.services')}</p>
-                <p class="text-lg font-semibold mb-2">{t('nav.technology')}</p>
-                <p class="text-lg font-semibold mb-2">{t('nav.events')}</p>
+                <a href={getRelativeLocaleUrl(lang)} class="text-lg font-semibold mb-2">{t('nav.home')}</a>
+                <a href={getRelativeLocaleUrl(lang, 'nosotros')} class="text-lg font-semibold mb-2">{t('nav.about')}</a>
+                <a href={getRelativeLocaleUrl(lang, 'servicios')} class="text-lg font-semibold mb-2">{t('nav.services')}</a>
+                <a href={getRelativeLocaleUrl(lang, 'tecnologia')} class="text-lg font-semibold mb-2">{t('nav.technology')}</a>
+                <!-- <a class="text-lg font-semibold mb-2">{t('nav.events')}</a> -->
             </nav>
 
             <div>
