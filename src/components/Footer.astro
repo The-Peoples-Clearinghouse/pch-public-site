@@ -28,10 +28,10 @@ const t = useTranslations(lang);
             class="flex flex-col md:flex-row gap-8 border-t border-gray-200 pt-8 px-4"
         >
             <nav class="hidden md:block basis-1/3">
-                <a href={getRelativeLocaleUrl(lang)} class="text-lg font-semibold mb-2">{t('nav.home')}</a>
-                <a href={getRelativeLocaleUrl(lang, 'nosotros')} class="text-lg font-semibold mb-2">{t('nav.about')}</a>
-                <a href={getRelativeLocaleUrl(lang, 'servicios')} class="text-lg font-semibold mb-2">{t('nav.services')}</a>
-                <a href={getRelativeLocaleUrl(lang, 'tecnologia')} class="text-lg font-semibold mb-2">{t('nav.technology')}</a>
+                <a href={getRelativeLocaleUrl(lang)} class="text-lg font-semibold mb-2 block">{t('nav.home')}</a>
+                <a href={getRelativeLocaleUrl(lang, 'nosotros')} class="text-lg font-semibold mb-2 block">{t('nav.about')}</a>
+                <a href={getRelativeLocaleUrl(lang, 'servicios')} class="text-lg font-semibold mb-2 block">{t('nav.services')}</a>
+                <a href={getRelativeLocaleUrl(lang, 'tecnologia')} class="text-lg font-semibold mb-2 block">{t('nav.technology')}</a>
                 <!-- <a class="text-lg font-semibold mb-2">{t('nav.events')}</a> -->
             </nav>
 
