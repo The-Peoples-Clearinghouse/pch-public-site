@@ -1,0 +1,19 @@
+---
+interface Props {
+	message: string;
+}
+
+const { message } = Astro.props;
+---
+<style>
+	#notification {
+		transition: opacity 0.4s ease-in-out;
+	}
+
+	.active {
+		opacity: 1;
+	}
+</style>
+<div id="notification" class="bg-green-600 rounded-md px-8 py-6 flex items-center opacity-0 justify-center fixed bottom-6 right-6">
+	<p class="text-white">{message}</p>
+</div>
