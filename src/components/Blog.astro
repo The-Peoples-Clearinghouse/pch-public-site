@@ -1,0 +1,100 @@
+---
+import { Image } from "astro:assets";
+import example from "../images/example.jpeg";
+import example2 from "../images/example.webp";
+
+const articles = [
+    {
+        title: "Hacktoberfest 2024: Celebrating Open Source and Community Impact with Interledger",
+        date: "11 Nov 2024",
+        description:
+            "The Interledger Foundation participated in Hacktoberfest 2024 by supporting open-source contributions, co-hosting community events, and facilitating collaborative efforts to celebrate and expand our valued open-source community.",
+        link: "/hacktoberfest-2024",
+        image: example,
+        tags: ["Open Source", "Community", "Hacktoberfest"],
+    },
+    {
+        title: "Introducing the Parliamentarian Track at the Interledger Summit 2024",
+        date: "10 Nov 2024",
+        description:
+            "This year's Interledger Summit introduced a Parliamentarian Track, providing a platform for policy makers to discuss the impact of financial technologies.",
+        link: "/parliamentarian-track",
+        image: example2,
+        tags: ["Interledger"],
+    },
+];
+---
+
+<section class="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
+    <h1 class="text-4xl font-bold text-gray-800 mb-6">Blog</h1>
+    <div class="mb-4 flex gap-4 items-center">
+        <label for="tags" class="text-lg font-medium text-gray-800"
+            >Filter by tag:</label
+        >
+        <select id="tags" class="border border-gray-300 rounded-md py-2 px-3">
+            <option value="">- Any -</option>
+            {
+                Array.from(
+                    new Set(articles.flatMap((article) => article.tags)),
+                ).map((tag) => <option value={tag}>{tag}</option>)
+            }
+        </select>
+
+        <button id="myButton" type="button">Apply</button>
+    </div>
+    <div id="articles" class="flex flex-col gap-8">
+        {
+            articles.map((article) => (
+                <div
+                    class="flex items-start gap-6 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden"
+                    data-tags={article.tags.join(",")}
+                >
+                    <Image
+                        src={article.image}
+                        alt={article.title}
+                        class="w-1/6 h-auto object-cover"
+                    />
+                    <div class="p-6 flex-1">
+                        <h2 class="text-2xl font-bold text-gray-800">
+                            <a href={article.link}>{article.title}</a>
+                        </h2>
+                        <p class="text-gray-500 text-sm mt-2">{article.date}</p>
+                        <p class="text-gray-700 mt-4">{article.description}</p>
+                        <a
+                            href={article.link}
+                            class="text-blue-500 hover:underline mt-4 inline-block"
+                        >
+                            Read more →
+                        </a>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const button = document.getElementById("myButton");
+      const articlesContainer = document.getElementById("articles");
+      if (!articlesContainer) {
+        console.error("El contenedor de artículos no fue encontrado.");
+        return;
+      }
+  
+      button?.addEventListener("click", () => {
+        const select = document.getElementById("tags") as HTMLSelectElement;
+        const selectedTag = select?.value || ""; // Obtener el tag seleccionado
+  
+        // Filtrar artículos
+        Array.from(articlesContainer.children).forEach((article) => {
+          const tags = (article as HTMLElement).getAttribute("data-tags") || "";
+          if (!selectedTag || tags.includes(selectedTag)) {
+            (article as HTMLElement).classList.remove("hidden"); // Mostrar
+          } else {
+            (article as HTMLElement).classList.add("hidden"); // Ocultar
+          }
+        });
+      });
+    });
+  </script>
