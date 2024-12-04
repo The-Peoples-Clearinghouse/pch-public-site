@@ -56,7 +56,7 @@ export const ui = {
 		'home.about.2.text.1': 'Detrás de la Cámara de la Gente, hay diversas instituciones clave, como la Asociación Mexicana de Uniones de Crédito del Sector Social (AMUCSS), y diversas Sociedades Cooperativas de Ahorro y Préstamo.',
 		'home.about.2.text.2': 'AMUCSS lidera una red de 140 bancos comunitarios en todo México, que cubre 34 lenguas indígenas, y en que el 60% de los clientes finales son mujeres de regiones marginadas.',
 		'home.about.2.text.3': 'La Cámara de la Gente es impulsada por expertos del sector financiero popular, con amplia experiencia en finanzas sociales, remesas, sistemas de pago y justicia social. Te invitamos a unirte a este gran proyecto por la inclusión financiera real.',
-		'home.about.3.title': 'Misiónn',
+		'home.about.3.title': 'Misión',
 		'home.about.3.text.1': 'Cambiar la vida de millones de personas que viven en comunidades, mediante la inclusión financiera digital y el acceso a remesas a cuenta y servicios de crédito justo.',
 		'home.about.3.text.2': 'En particular, cada remesa que se deposita en una cuenta de ahorros (y no en efectivo) en un banco comunitario o en una cooperativa de ahorro (y no en un banco comercial) empodera a la comunidad y puede tener un impacto social masivo.',
 		'home.about.3.text.3': '¿Cómo? Más remesas a cuenta implican mayor volumen de ahorro e inversión, que llevan a más créditos para proyectos productivos locales, que llevan a más empleos y oportunidades regionales, que llevan a tener menos desigualdad, pues toda la comunidad se beneficia, no sólo quienes reciben remesas.',
